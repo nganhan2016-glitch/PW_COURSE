@@ -1,0 +1,29 @@
+Trong một folder mới được tạo ra, mình thực hiện lần lượt các lệnh sau. Hãy liệt kê các
+file theo từng vùng sau khi thao tác một loạt các lệnh sau (sẽ rất tuyệt nếu bạn không
+chạy lệnh trên máy thật, mà bạn suy nghĩ trong đầu để ra được kết quả; bạn sẽ nhớ rất
+lâu đấy ^^):
+
+1 https://playwrightvn.com
+
+Playwright Việt Nam
+Học Automation Test Từ Chưa Biết Gì
+
+a. Tạo 3 file: file1, file2, file3
+==> file1, file2, file3 đang ở vùng local
+
+b. Chạy lệnh: git init
+==> file1, file2, file3 chuyển sang vùng working directory
+
+c. Chạy lệnh: git commit -m”init project”
+==> 3 files vẫn ở vùng working directory
+
+d. Chạy lệnh: git add file1
+==>file1 chuyển qua vùng staging area
+==>file2, file3: vẫn ở working directory
+
+e. Chạy lệnh: git commit -m”add file1”
+==>file1 chuyển qua repository
+==>file2, file3: vẫn ở working directory
+
+f. Chạy lệnh: git commit -m”add file”
+==>file2, file3: vẫn ở working directory

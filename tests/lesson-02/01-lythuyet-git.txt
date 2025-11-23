@@ -1,0 +1,4 @@
+1. git init: khởi tạo empty repo
+2. git add <file_name>: đưa file cụ thể từ vùng working directory sang vùng staging area
+3. git add .: đưa toàn bộ file mới và file có thay đổi từ vùng working directory sang vùng staging area
+4. git commit -m “message”: đưa toàn bộ file ở vùng staging area sang repository để tạo ra 1 phiên bản
