@@ -1,0 +1,60 @@
+Giảsử có 1 folder demo mới được tạo. Hãy liệt kê các file theo từng vùng, liệt kê các
+ commit và message tương ứng sau khi thao tác một loạt các lệnh sau (sẽ rất tuyệt vời
+nếu bạn không chạy trên máy tính thật, mà bạn chạy trong đầu, sẽ giúp bạn hiểu về Git
+rõ ràng hơn):
+Trình bày theo format liệt kê rõ từng bước, mỗi bước thì các vùng có file nào. Việc này
+sẽ giúp mentor chấm bài kĩ hơn và kiểm tra rằng bạn hiểu đúng bài.
+
+Tạo 3 file: file1, file2, file3
+Local: file1, file2, file3
+Working:
+Staging:
+Repository: 
+
+b. Chạy lệnh: git init
+Local:
+Working: file1, file2, file3
+Staging:
+Repository:
+
+c. Chạy lệnh: git commit -m”init project”
+Local:
+Working: file1, file2, file3
+Staging:
+Repository:
+
+d. Chạy lệnh: git add file1
+Local: 
+Working: file2, file3
+Staging: file1
+Repository:
+
+e. Chạy lệnh: git commit -m”add file”
+Local:
+Working: file2, file3
+Staging:
+Repository: file1
+
+f. Chạy lệnh: git add .
+Local:
+Working:
+Staging: file2, file3
+Repository: file1
+
+g. Chạy lệnh: git restore --staged file2
+Local:
+Working: file2
+Staging: file3
+Repository: file1
+
+h. Chạy lệnh: git commit -m”add all files”
+Local:
+Working: file2
+Staging: 
+Repository: file1, file3
+
+i. Chạy lệnh: git reset HEAD~1
+Local:
+Working: file1, file2, file3
+Staging:
+Repository:

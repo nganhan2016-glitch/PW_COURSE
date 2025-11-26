@@ -1,0 +1,4 @@
+git commit --amend: câu lệnh git sai, ko update duoc commit message trước đó
+git commit --amend -m”<message>”: update commit message
+git restore --staged <file>: chuyen files tu vùng staging area về working directory
+git reset HEAD~1: reset 1 commit. Hoặc, uncommit những files ở lần commit trước.
