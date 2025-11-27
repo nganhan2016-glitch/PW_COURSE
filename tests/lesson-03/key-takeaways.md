@@ -47,14 +47,25 @@ Trong dự án thường có nhiều file không cần thiết phải đưa vào
     - camelCase: đặt tên biến, hàm
     - PascalCase: đặt tên class
 2. Console.log with ‘ and “
+console.log(“message”) để in ra giá trị kiểu chuỗi, hay
+console.log(<variable_name>) để in ra giá trị của biến.
+Để in ra kết hợp giá trị kiểu chuỗi và giá trị của biến, ta có hai cách như sau:
+- console.log(“Dùng dấu cộng như sau: “ + name)
+- console.log(“Hoặc dùng dấu phẩy: “, name)
+Để nối chuỗi từ hai biến, ta sử dụng dấu cộng (+):
+- const str1 = “Hello”;
+- const str2 = “Playwright Viet Nam”
+- console.log(str1 + str2); // HelloPlaywright Viet Nam
+
     - console.log(‘Toi la Nga’);
     - console.log(“Toi la Phong”);
     - console.log(`${variable_name}`)
     - let name = “Nga”;
     - console.log(`Toi la ${name}`);
     - console.log(“Toi ten la” + name + “”)
+    - 
 3. Object: Object là một trong những kiểu dữ liệu quan trọng nhất trong JavaScript, dùng để lưu trữ dữ liệu dạng key-value.
-Cú pháp
+***3.1 Cú pháp***
 Trong đó:
 ● <key>: giống quy tắc đặt tên biến
 ● <value>: có kiểu giống biến, hoặc là 1 object khác.
@@ -77,6 +88,44 @@ console.log(user.address.city);
 console.log(user["phone number"]);
 console.log(user.address["thanh pho"]);
 `
+*** 3.2 Thêm thuộc tính ***
+Để thêm thuộc tính mới vào object, chúng ta chỉ cần dùng dấu . hoặc ngoặc vuông [] để định
+nghĩa thuộc tính mới. Ví dụ:
+let bike = {
+make: 'Yamaha',
+model: 'YZF-R3'
+};
+bike.color = “Blue”;
+bike[“price new”] = 100;
+console.log(bike);
+{make: 'Yamaha', model: 'YZF-R3', color: 'Blue', ‘price new’ : 100}
+
+*** 3.3 Xóa thuộc tính ***
+Để xóa thuộc tính của object, chúng ta dùng hàm delete:
+let employee = {
+name: 'Le Van C',
+age: 30,
+department: 'HR'
+};
+
+delete employee.age;
+console.log(employee);
+Kết quả:
+{name: 'Le Van C', department: 'HR'}
+
+
 4. Array
+Để thêm phần tử vào mảng, ta dùng hàm push
+Ví dụ:
+const arr = [1,2];
+arr.push(3);
+console.log(arr);
+// Kết quả in ra
+[1, 2, 3]
+
 5. Operator
+&& : cả 2 vế của mệnh đềđều đúng
+|| : một trong 2 vế đúng
+! : đảo ngược lại giá trị của mệnh đề
+
 6. Function

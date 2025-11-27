@@ -51,6 +51,16 @@
 - So sánh lớn hơn, nhỏ hơn: >, <, >=, <=
 - AND: &&
 - OR: ||
+- %: % sẽ trả về phần dư của phép tính.
+Giả sử:
+- 3%3 = 0 (vì 3 chia hết cho 3 dư 0)
+- 3%2 = 1 (vì 3 không chia hết cho 2, dư 1)
+- 3%1 = 0 (vì 3 chia hết 1 dư 0)
+- 1%2 = 1 (vì 1 không chia hết cho 2, dư 1)
+- 100%80 = 20 (vì 100 không chia hết cho 80, dư 20)
+Ứng dụng tìm số chẵn, lẻ:
+- Nếu là số lẻ, chia dư cho 2 = 1: x % 2 === 1
+- Nếu là số chẵn, chia dư cho 2 = 0: x % 2 === 0
 
 6. Câu điều kiện: if
 
