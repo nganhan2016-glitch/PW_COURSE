@@ -5,7 +5,6 @@ i. VD: 1, 5, 9, 13,...
 */
 
 for (let i = 1; i < 100; i += 4) {
-    process.stdout.write(i + " ");
-    //console.log(i + ", ");
-    
+    //process.stdout.write(i + " ");
+    console.log(i);
 }

@@ -30,13 +30,22 @@ for (let i = 1; i <= 10; i++) {
 /*5. Tính tổng doanh thu của 12 tháng trong năm dựa trên mảng doanh thu đã cho và
 in ra tổng doanh thu. Biết cấu trúc object của mảng doanh thu như sau:
 {“month”: 2, “total”: 100}*/
-revenuePerMonth = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]
-let revenue = {
-    month: 0,
-    total: 0
+let revenue = [
+    {"month":1, "total":100},
+    {"month":2, "total":110},
+    {"month":3, "total":120},
+    {"month":4, "total":130},
+    {"month":5, "total":140},
+    {"month":6, "total":150},
+    {"month":7, "total":160},
+    {"month":8, "total":170},
+    {"month":9, "total":180},
+    {"month":10, "total":190},
+    {"month":11, "total":200},
+    {"month":12, "total":200}, 
+]
+let totalRevenue = 0;
+for (let i = 0; i < revenue.length; i++) {
+    totalRevenue = totalRevenue + revenue[i].total;
 }
-revenue.month = revenuePerMonth.length;
-for (let i = 0; i < revenue.month; i++) {
-    revenue.total = revenue.total + revenuePerMonth[i];
-}
-console.log(revenue);
+console.log("Bài 5: Tổng doanh thu: " + totalRevenue);

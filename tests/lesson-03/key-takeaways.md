@@ -123,9 +123,20 @@ console.log(arr);
 // Kết quả in ra
 [1, 2, 3]
 
+Ví dụ mảng object;
+let students = [
+    { name: "A", score: 7.5 },
+    { name: "B", score: 8.5 },
+    { name: "C", score: 9.5 }
+]
+
 5. Operator
 && : cả 2 vế của mệnh đềđều đúng
 || : một trong 2 vế đúng
 ! : đảo ngược lại giá trị của mệnh đề
 
 6. Function
+Vi dụ:
+function plus(a, b) {
+    return a + b;
+}

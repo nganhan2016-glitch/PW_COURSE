@@ -55,6 +55,6 @@ Repository: file1, file3
 
 i. Chạy lệnh: git reset HEAD~1
 Local:
-Working: file1, file2, file3
+Working: file2, file3
 Staging:
-Repository:
+Repository: file1

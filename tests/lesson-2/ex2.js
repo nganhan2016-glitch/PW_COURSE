@@ -6,7 +6,7 @@ myName = "Nagi";
 console.log(myName);
 */
 
-const myName = "Alex";
-const myName1 = "Nagi";
+let myName = "Alex";
+myName = "Nagi";
 
-console.log(myName + ' ' + myName1);
+console.log(myName);

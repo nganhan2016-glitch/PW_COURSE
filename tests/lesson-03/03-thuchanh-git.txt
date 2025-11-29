@@ -13,16 +13,16 @@ Repository:
 c. Thêm file .gitignore, thêm vào 2 dòng:
 i. file1.txt
 ii. oops/
-Working: file1.txt, file2.txt, oops/file3.txt, .gitignore
+Working: file2.txt, .gitignore
 Staging:
 Repository:
 
 d. Chạy lệnh: git add .
-Working: file1.txt, oops/file3.txt, .gitignore
-Staging: file2.txt
+Working:
+Staging: file2.txt, .gitignore
 Repository:
 
 e. Chạy lệnh: git commit -m"init project"
-Working: file1.txt, oops/file3.txt, .gitignore
+Working: 
 Staging:
-Repository: file2.txt
+Repository: file2.txt, .gitignore

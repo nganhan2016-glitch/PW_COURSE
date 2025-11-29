@@ -34,8 +34,9 @@ let students = [
     { name: "B", score: 8.5 },
     { name: "C", score: 9.5 }
 ]
-let topStudents = [];
+
 function getTopStudents(students, threshold) {
+    let topStudents = [];
     for (let i = 0; i < students.length; i++) {
         if (students[i].score >= threshold) {
             topStudents.push(students[i]);
@@ -43,9 +44,9 @@ function getTopStudents(students, threshold) {
     }
     return topStudents;
 }
-topStudents = getTopStudents(students, 8);
+let returnedTopStudents = getTopStudents(students, 8);
 console.log("Bai 3: ");
-console.log(topStudents);
+console.log(returnedTopStudents);
 /*
 4. Viết hàm calculateInterest nhận 3 tham số:
 ● principal: số tiền gửi ban đầu (số).
