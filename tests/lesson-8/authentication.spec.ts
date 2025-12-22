@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe("AUTH - Authentication", async () => {
     test.beforeEach(async ({ page }) => {
         await test.step("Đi tới trang login: https://pw-practice-dev.playwrightvn.com/wp-admin", async () => {
-            page.goto("https://pw-practice-dev.playwrightvn.com/wp-admin");
+            await page.goto("https://pw-practice-dev.playwrightvn.com/wp-admin");
         })
     })
     const invalidUser = {
@@ -26,10 +26,8 @@ test.describe("AUTH - Authentication", async () => {
             await page.locator(xpath.password).fill(invalidUser.password);
 
             //  Giá trị của username, password được điền vào  ô input
-            const actualUsername = await page.locator(xpath.userName).inputValue();
-            const actualPassword = await page.locator(xpath.password).inputValue();
-            expect(actualUsername).toBe(invalidUser.userName);
-            expect(actualPassword).toBe(invalidUser.password);
+            await expect(page.locator(xpath.userName)).toHaveValue(invalidUser.userName);
+            await expect(page.locator(xpath.password)).toHaveValue(invalidUser.password);
         });
 
         await test.step("Click button login", async () => {
@@ -46,10 +44,8 @@ test.describe("AUTH - Authentication", async () => {
             await page.locator(xpath.password).fill(validUser.password);
 
             //  Giá trị của username, password được điền vào  ô input
-            const actualUsername = await page.locator(xpath.userName).inputValue();
-            const actualPassword = await page.locator(xpath.password).inputValue();
-            expect(actualUsername).toBe(validUser.userName);
-            expect(actualPassword).toBe(validUser.password);
+            await expect(page.locator(xpath.userName)).toHaveValue(validUser.userName);
+            await expect(page.locator(xpath.password)).toHaveValue(validUser.password);
 
         })
         await test.step("Click button login", async () => {
