@@ -6,19 +6,32 @@ test.describe("Exercise 2: Product Page", () => {
         const productPage = new ProductPage(page);
 
         // Navigate and click Product Page
-        productPage.openMaterialPage();
-        productPage.goToPage(productPage.xpathProductPage);
+        await productPage.openMaterialPage();
+        await productPage.goToPage(productPage.xpathProductPage);
 
         // Add product to Cart
-        productPage.addProductToCart("1", 2);
-        productPage.addProductToCart("2", 3);
-        productPage.addProductToCart("3", 1);
+        await productPage.addProductToCart("product1", 2);
+        await productPage.addProductToCart("product2", 3);
+        await productPage.addProductToCart("product3", 1);
 
         //Verify the quantity as input
-        await expect(page.locator("//tr[td[1][contains(.,'Product 1')]]/td[3]")).toHaveValue("2");
-        await expect(page.locator("//tr[td[1][contains(.,'Product 2')]]/td[3]")).toHaveValue("3");
-        await expect(page.locator("//tr[td[1][contains(.,'Product 3')]]/td[3]")).toHaveValue("1");
+        await expect(page.locator("//tr[td[1][contains(.,'Product 1')]]/td[3]")).toHaveText("2");
+        await expect(page.locator("//tr[td[1][contains(.,'Product 2')]]/td[3]")).toHaveText("3");
+        await expect(page.locator("//tr[td[1][contains(.,'Product 3')]]/td[3]")).toHaveText("1");
+        
         //Verify totalAmount
+        const addedProducts = [
+            { productId: "1", price: 10, quantity: 2 },
+            { productId: "2", price: 20, quantity: 3 },
+            { productId: "3", price: 30, quantity: 1 }
+        ];
 
+        let totalPrice = 0;
+        for (let i = 0; i < addedProducts.length; i++) {
+            totalPrice += addedProducts[i].price * addedProducts[i].quantity; 
+        }
+
+        await expect(page.locator("//td[contains(@class, 'total-price')]")).toContainText(totalPrice.toString());
+        await page.close();
     })
 })

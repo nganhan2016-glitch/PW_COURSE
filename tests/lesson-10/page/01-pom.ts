@@ -118,12 +118,13 @@ export class ProductPage extends MaterialBasePage {
     }
 
     async addProductToCart (productId: string, quantity: number){
-        if (productId == "1") {
+        if (productId == "product1") {
             await this.page.locator(this.xpathProduct1).click({clickCount: quantity})
-        } else if (productId == "2") {
+        } else if (productId == "product2") {
             await this.page.locator(this.xpathProduct2).click({clickCount: quantity});
-        } else if (productId == "3") {
+        } else if (productId == "product3") {
             await this.page.locator(this.xpathProduct3).click({clickCount: quantity});
         }            
     }
+
 }
