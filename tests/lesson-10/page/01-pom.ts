@@ -4,8 +4,8 @@ class MaterialBasePage {
     page: Page;
     xpathRegisterPage = "//a[@href='01-xpath-register-page.html']";
     xpathProductPage = "//a[@href='02-xpath-product-page.html']";
-    cssTodoPage = "";
-    personalNote = "";
+    xpathTodoPage = "//a[@href='03-xpath-todo-list.html']";
+    xpathPersonalNote = "//a[@href='04-xpath-personal-notes.html']";
 
     constructor (page: Page) {
         this.page = page;
@@ -128,3 +128,41 @@ export class ProductPage extends MaterialBasePage {
     }
 
 }
+
+export class TodoPage extends MaterialBasePage {
+
+    xpathTxtNewTask = "//input[@id='new-task']";
+    xpathBtnAddtask = "//button[@id='add-task']";
+
+    constructor (page: Page) {
+        super (page);
+    }
+
+    async addTask (task: string) {
+        await this.page.locator(this.xpathTxtNewTask).fill(task);
+        await this.page.locator(this.xpathBtnAddtask).click();
+    }
+}
+
+export class PersonalNotePage extends MaterialBasePage  {
+
+    xpathTitle = "//input[@id='note-title']";
+    xpathContent = "//textarea[@id='note-content']";
+    xpathBtnAddNote = "//button[@id='add-note']";
+    xpathTxtSearch = "//input[@id='search']";
+
+    constructor (page: Page) {
+        super (page);
+    }
+
+    async addNote (title: string, content:string) {
+        await this.page.locator(this.xpathTitle).pressSequentially(title);
+        await this.page.locator(this.xpathContent).pressSequentially(content);
+        await this.page.locator(this.xpathBtnAddNote).click();
+    }
+
+    async searchNote (keyword: string) {
+        await this.page.locator(this.xpathTxtSearch).fill(keyword);
+    }
+}
+

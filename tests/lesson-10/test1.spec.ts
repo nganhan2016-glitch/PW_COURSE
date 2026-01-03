@@ -1,8 +1,8 @@
-import { test, expect} from "@playwright/test";
+import { test, expect } from "@playwright/test";
 import { RegisterPage } from "./page/01-pom.ts";
 
 test.describe("Exercise 1: Register Page", () => {
-    test("Register Page", async ({page}) => {
+    test("Register Page", async ({ page }) => {
 
         const registerPage = new RegisterPage(page);
         //Navigate and click RegisterPage
@@ -29,7 +29,7 @@ test.describe("Exercise 1: Register Page", () => {
         await expect(page.locator("//table[@id='userTable']//tbody//tr[last()]/td[3]")).toContainText("nn001@company.com");
 
         await expect(page.locator("//table[@id='userTable']//tbody//tr[last()]/td[4]")).toContainText("female");
-        await expect(page.locator("//table[@id='userTable']//tbody//tr[last()]/td[4]")).toContainText("cooking");  
+        await expect(page.locator("//table[@id='userTable']//tbody//tr[last()]/td[4]")).toContainText("cooking");
         await expect(page.locator("//table[@id='userTable']//tbody//tr[last()]/td[4]")).toContainText("canada");
         await expect(page.locator("//table[@id='userTable']//tbody//tr[last()]/td[4]")).toContainText("2000-01-22");
         await expect(page.locator("//table[@id='userTable']//tbody//tr[last()]/td[4]")).toContainText("NN Biography");
@@ -37,7 +37,7 @@ test.describe("Exercise 1: Register Page", () => {
         await expect(page.locator("//table[@id='userTable']//tbody//tr[last()]/td[4]")).toContainText("#00fbff");
         await expect(page.locator("//table[@id='userTable']//tbody//tr[last()]/td[4]")).toContainText("Yes");
 
-        await page.close(); 
+        await page.close();
     })
 })
 

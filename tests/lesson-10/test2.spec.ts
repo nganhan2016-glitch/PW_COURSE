@@ -1,8 +1,8 @@
-import { test, expect} from "@playwright/test";
+import { test, expect } from "@playwright/test";
 import { ProductPage } from "./page/01-pom.ts";
 
 test.describe("Exercise 2: Product Page", () => {
-    test("Product Page", async ({page}) => {
+    test("Product Page", async ({ page }) => {
         const productPage = new ProductPage(page);
 
         // Navigate and click Product Page
@@ -18,7 +18,7 @@ test.describe("Exercise 2: Product Page", () => {
         await expect(page.locator("//tr[td[1][contains(.,'Product 1')]]/td[3]")).toHaveText("2");
         await expect(page.locator("//tr[td[1][contains(.,'Product 2')]]/td[3]")).toHaveText("3");
         await expect(page.locator("//tr[td[1][contains(.,'Product 3')]]/td[3]")).toHaveText("1");
-        
+
         //Verify totalAmount
         const addedProducts = [
             { productId: "1", price: 10, quantity: 2 },
@@ -28,7 +28,7 @@ test.describe("Exercise 2: Product Page", () => {
 
         let totalPrice = 0;
         for (let i = 0; i < addedProducts.length; i++) {
-            totalPrice += addedProducts[i].price * addedProducts[i].quantity; 
+            totalPrice += addedProducts[i].price * addedProducts[i].quantity;
         }
 
         await expect(page.locator("//td[contains(@class, 'total-price')]")).toContainText(totalPrice.toString());
