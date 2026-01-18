@@ -1,0 +1,4 @@
+https://trace.playwright.dev/?trace=https://monitor.kegel-exerciser.org/reports/2026-01-15_12-49-44_NZ-PayPal-Standard-Checkout-with-PayPal-Standard-in-Checkout-page.zip
+
+https://trace.playwright.dev/?trace=https://monitor.kegel-exerciser.org/reports/2026-01-15_13-40-57_Checkout-flow-with-Pay-now-button-click-and-delay.zip
+
